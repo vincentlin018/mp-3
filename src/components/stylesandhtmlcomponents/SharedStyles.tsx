@@ -17,7 +17,7 @@ export const StyledMain = styled.main`
 
     @media (max-width: 900px) {
         width: 100%;
-        padding: 1vw;
+        padding: 6vw;
     }    
 `;
 

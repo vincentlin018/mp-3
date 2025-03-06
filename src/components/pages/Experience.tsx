@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
-
-import { StyledMain, StyledH3 } from "./SharedStyles";
+import { StyledMain, StyledH3 } from "../stylesandhtmlcomponents/SharedStyles.tsx";
+import { UseDocumentTitle, UseMetaContent } from "../stylesandhtmlcomponents/HTMLComponents.tsx";
 
 const StyledRow1 = styled.p`
     display: flex;
@@ -45,6 +45,9 @@ const StyledImage = styled.div`
 
 
 export default function Experience() {
+    UseDocumentTitle('Experience | Resume');
+    UseMetaContent("A website that display's Vincent's work experience");
+
     return (
         <>
             <StyledMain>

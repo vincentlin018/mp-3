@@ -1,5 +1,6 @@
 import { styled } from 'styled-components';
-import { StyledMain, StyledH3 } from "./SharedStyles.tsx";
+import { StyledMain, StyledH3 } from "../stylesandhtmlcomponents/SharedStyles.tsx";
+import { UseDocumentTitle, UseMetaContent } from "../stylesandhtmlcomponents/HTMLComponents.tsx";
 
 
 const StyledGrid = styled.div`
@@ -37,6 +38,9 @@ const StyledList = styled.ul`
 `;
 
 export default function Skills() {
+    UseDocumentTitle('Skills | Resume');
+    UseMetaContent("A website that display's Vincent's skills");
+
     return (
         <StyledMain>
             <StyledH3>Skills</StyledH3>
@@ -81,7 +85,7 @@ export default function Skills() {
                 <StyledGridItem>
                     <StyledListTitle>Libraries:</StyledListTitle>
                     <StyledList>
-                        <li>Pandas</li>
+                        <li>pandas</li>
                         <li>Matplotlib</li>
                         <li>NumPy</li>
                         <li>SciKit-learn</li>

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
-import { StyledH3, StyledMain, StyledMainText } from "./SharedStyles.tsx";
+import { UseDocumentTitle, UseMetaContent } from "../stylesandhtmlcomponents/HTMLComponents.tsx";
+import { StyledH3, StyledMain, StyledMainText } from "../stylesandhtmlcomponents/SharedStyles.tsx";
 
 const StyledImage = styled.div`
     width: 40%;
@@ -29,6 +30,9 @@ const StyledParagraph = styled.p`
 `;
 
 export default function Home() {
+    UseDocumentTitle('Home | Resume');
+    UseMetaContent("Welcome to Vincent Lin's online resume! Explore Vincent's profile and learn more about his skills and experiences.");
+
     return (
         <StyledMain>
             <StyledH3>Home</StyledH3>

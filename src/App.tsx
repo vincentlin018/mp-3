@@ -1,6 +1,19 @@
 import { createBrowserRouter, Route, RouterProvider, Routes } from 'react-router';
 import { styled } from 'styled-components';
 
+import GlobalStyles from './components/stylesandhtmlcomponents/GlobalStyles.tsx';
+import Header from './components/sharedcomponents/Header.tsx';
+import Navigation from './components/sharedcomponents/Navigation.tsx';
+import Footer from './components/sharedcomponents/Footer.tsx';
+import Home from './components/pages/Home.tsx';
+import Experience from './components/pages/Experience.tsx';
+import Skills from './components/pages/Skills.tsx';
+import Education from './components/pages/Education.tsx';
+import References from './components/pages/References.tsx';
+import Achievements from './components/pages/Achievements.tsx';
+import Projects from './components/pages/Projects.tsx';
+import Credits from './components/pages/Credits.tsx';
+
 const StyledContent = styled.div`
     width: 80%;
     margin: 0 auto;
@@ -23,15 +36,6 @@ const StyledSplitContent = styled.div`
     }
 `;
 
-import GlobalStyles from './components/GlobalStyles';
-
-import Header from './components/Header';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import Home from './components/Home';
-import Experience from './components/Experience';
-import Skills from './components/Skills';
-
 function Root () {
   return (
       <StyledContent>
@@ -44,6 +48,11 @@ function Root () {
                 <Route path="/" element={<Home/>}/>
                 <Route path="/experience" element={<Experience />}/>
                 <Route path="/skills" element={<Skills />}/>
+                <Route path="/education" element={<Education />}/>
+                <Route path="/references" element={<References />} />
+                <Route path="/achievements" element={<Achievements />} />
+                <Route path="/projects" element={<Projects />} />
+                <Route path="/credits" element={<Credits/>} />
 
             </Routes>
             </StyledSplitContent>
