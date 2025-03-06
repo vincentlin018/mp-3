@@ -1,12 +1,14 @@
 import { styled } from 'styled-components';
 import {StyledMain, StyledH3} from "../stylesandhtmlcomponents/SharedStyles.tsx";
-import { UseDocumentTitle, UseMetaContent } from "../stylesandhtmlcomponents/HTMLComponents.tsx";
+import { UseMetaContent } from "../stylesandhtmlcomponents/HTMLComponents.tsx";
 
+// Styled component for the paragraph text
 const StyledP = styled.p `
     text-align: center;
     font-size: calc(10px + 1vw);
 `;
 
+// Styled component for professional references section
 const StyledProfessional = styled.div`
     /* Use CSS Grid for layout */
     display: grid;
@@ -15,7 +17,7 @@ const StyledProfessional = styled.div`
     /* Add 10px gap between grid items */
     gap: 10px;
     /* Add vertical margin for spacing */
-    margin: 20px 0;
+    margin: 3vh 0;
 
     p {
         padding: 15px;
@@ -28,6 +30,7 @@ const StyledProfessional = styled.div`
     }
 `;
 
+// Styled component for personal references section (identical to StyledProfessional)
 const StyledPersonal = styled.div`
     /* Use CSS Grid for layout */
     display: grid;
@@ -36,7 +39,7 @@ const StyledPersonal = styled.div`
     /* Add 10px gap between grid items */
     gap: 10px;
     /* Add vertical margin for spacing */
-    margin: 20px 0;
+    margin: 3vh 0;
 
     p {
         padding: 15px;
@@ -49,7 +52,9 @@ const StyledPersonal = styled.div`
     }
 `;
 
+// Styled component for subheadings
 const StyledH5 = styled.h5`
+    // White line span across all columns
     grid-column: 1 / -1;
     text-align: center;
     border-bottom: 2px solid #ddd8ce;
@@ -59,7 +64,7 @@ const StyledH5 = styled.h5`
 `;
 
 export default function References() {
-    UseDocumentTitle('References | Resume');
+    // Set meta description for SEO
     UseMetaContent("A website that display's Vincent's references");
 
     return (
@@ -68,11 +73,12 @@ export default function References() {
                 <StyledH3>References</StyledH3>
 
                 <StyledH5>Professional</StyledH5>
-
                 <StyledProfessional>
+                    {/* Headers for professional references */}
                     <StyledP>Name</StyledP>
                     <StyledP>Position</StyledP>
                     <StyledP>Contact</StyledP>
+                    {/* Professional reference entries */}
                     <p>Dr. Tyler Gu, Ph.D</p>
                     <p>Partner of Alpha Bull LP</p>
                     <p>(617)-999-6587</p>
@@ -86,9 +92,11 @@ export default function References() {
 
                 <StyledH5>Personal</StyledH5>
                 <StyledPersonal>
+                    {/* Headers for personal references */}
                     <StyledP>Name</StyledP>
                     <StyledP>Relation</StyledP>
                     <StyledP>Contact</StyledP>
+                    {/* Personal reference entries */}
                     <p>You Lin</p>
                     <p>Dad</p>
                     <p>917-345-6090</p>

@@ -1,5 +1,6 @@
 import { styled } from 'styled-components';
 
+// Styled component for the header
 const StyledHeader = styled.header`
     display: flex;
     flex-direction: column;
@@ -16,6 +17,7 @@ const StyledHeader = styled.header`
     
 `;
 
+// Header component
 export default function Header() {
     return (
         <StyledHeader>

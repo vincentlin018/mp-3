@@ -1,72 +1,61 @@
 import { createBrowserRouter, Route, RouterProvider, Routes } from 'react-router';
-import { styled } from 'styled-components';
+import styled from 'styled-components';
 
 import GlobalStyles from './components/stylesandhtmlcomponents/GlobalStyles.tsx';
 import Header from './components/sharedcomponents/Header.tsx';
 import Navigation from './components/sharedcomponents/Navigation.tsx';
 import Footer from './components/sharedcomponents/Footer.tsx';
-import Home from './components/pages/Home.tsx';
-import Experience from './components/pages/Experience.tsx';
-import Skills from './components/pages/Skills.tsx';
-import Education from './components/pages/Education.tsx';
-import References from './components/pages/References.tsx';
-import Achievements from './components/pages/Achievements.tsx';
-import Projects from './components/pages/Projects.tsx';
-import Credits from './components/pages/Credits.tsx';
+import {DynamicPage} from "./components/DynamicPage.tsx";
 
+// Styled component for the main content area
 const StyledContent = styled.div`
-    width: 80%;
-    margin: 0 auto;
-    
-    
+    width: 80%; // Occupies 80% of the parent container's width
+    margin: 0 auto; // Centers the content horizontally
 `;
 
+// Styled component for splitting the content into two sections
 const StyledSplitContent = styled.div`
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    background-color: #334464;
+    width: 100%; // Occupies full width of its parent
+    display: flex; // Enables flexbox layout
+    flex-direction: row; // Arranges items in a row
+    background-color: #334464; // Sets background color to a dark blue-gray
 
+    // Media query for screens smaller than 900px
     @media (max-width: 900px) {
-        width: 100%;
-        min-height: 100vh;
-        flex-direction: column;
-        align-items: center;
-        margin: auto;
+        width: 100%; // Occupies full width
+        min-height: 100vh; // Minimum height is the full viewport height
+        flex-direction: column; // Arranges items in a column
+        align-items: center; // Centers items horizontally
+        margin: auto; // Centers the component
     }
 `;
 
-function Root () {
-  return (
-      <StyledContent>
-            <GlobalStyles />
-            <Header />
+// Root component that contains the basic layout
+function Root() {
+    return (
+        <StyledContent>
+            <GlobalStyles /> {/* Applies global styles */}
+            <Header /> {/* Renders the header component */}
             <StyledSplitContent>
-            <Navigation />
-
-            <Routes>
-                <Route path="/" element={<Home/>}/>
-                <Route path="/experience" element={<Experience />}/>
-                <Route path="/skills" element={<Skills />}/>
-                <Route path="/education" element={<Education />}/>
-                <Route path="/references" element={<References />} />
-                <Route path="/achievements" element={<Achievements />} />
-                <Route path="/projects" element={<Projects />} />
-                <Route path="/credits" element={<Credits/>} />
-
-            </Routes>
+                <Navigation /> {/* Renders the navigation component */}
+                <Routes>
+                    {/* Route for the home page.  The DynamicPage component will handle rendering the Home component when the path is "/" */}
+                    <Route path="/" element={<DynamicPage />} />
+                    {/* Route for dynamic pages.  The DynamicPage component will handle rendering different content based on the ":page" parameter */}
+                    <Route path="/:page" element={<DynamicPage />} />
+                </Routes>
             </StyledSplitContent>
-            <Footer />
-      </StyledContent>
-  )
+            <Footer /> {/* Renders the footer component */}
+        </StyledContent>
+    );
 }
 
+// Creates a browser router instance.  All routes are handled by the Root component.
 const router = createBrowserRouter(
-    [{path:'*', Component: Root}]
+    [{ path: '*', Component: Root }] // '*' matches any route, ensuring the Root component handles all navigation
 );
 
-
-
+// Main App component that uses RouterProvider to enable routing
 export default function App() {
-  return <RouterProvider router={router}/>
+    return <RouterProvider router={router} />; // Provides the router to the application
 }

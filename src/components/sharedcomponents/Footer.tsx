@@ -1,6 +1,7 @@
 import { styled } from 'styled-components';
 import { Link } from 'react-router';
 
+// Styled component for the Footer
 const StyledFooter = styled.p `
     background-color: #222222;
     color: white;
@@ -19,6 +20,7 @@ const StyledFooter = styled.p `
     }
 `;
 
+// Footer component
 export default function Footer() {
     return (
         <>

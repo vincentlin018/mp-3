@@ -1,9 +1,9 @@
 import { styled } from 'styled-components';
 import { StyledMain, StyledH3 } from '../stylesandhtmlcomponents/SharedStyles.tsx';
-import { UseDocumentTitle, UseMetaContent } from "../stylesandhtmlcomponents/HTMLComponents.tsx";
+import { UseMetaContent } from "../stylesandhtmlcomponents/HTMLComponents.tsx";
 import Calculator from '../calculator/Calculator.tsx';
 
-
+// Styled component for project title and date row
 const StyledRow = styled.div`
     display: flex;
     flex-direction: row;
@@ -13,10 +13,12 @@ const StyledRow = styled.div`
     margin-top: 1vh;
 `;
 
-const StyledDescription = styled.ul `
+// Styled component for project description list
+const StyledDescription = styled.ul`
     padding: 2vw;
 `;
 
+// Styled component for calculator container
 const StyledCalc = styled.div`
     display: flex;
     justify-content: center;
@@ -24,15 +26,16 @@ const StyledCalc = styled.div`
     margin-bottom: 2vh;
 `;
 
-
 export default function Projects() {
-    UseDocumentTitle('Projects | Resume');
+    // Set meta description for SEO
     UseMetaContent("A website that display's Vincent's projects");
 
     return(
         <>
             <StyledMain>
                 <StyledH3>Projects</StyledH3>
+
+                {/* React Calculator Project */}
                 <StyledRow>
                     <p>React Calculator | <em>React, TypeScript, Styled Components</em></p>
                     <p><em>Feb. 2025 - Present</em></p>
@@ -43,11 +46,12 @@ export default function Projects() {
                     <li>Utilized Styled Components for consistent and maintainable styling</li>
                 </StyledDescription>
 
-                {/* Adding the Calculator*/}
+                {/* Embedding the Calculator component */}
                 <StyledCalc>
                     <Calculator />
                 </StyledCalc>
 
+                {/* React App Project */}
                 <StyledRow>
                     <p>React App | <em>React, TypeScript, Vite, Git, Vercel</em></p>
                     <p><em>Feb. 2025 - Present</em></p>
@@ -58,6 +62,8 @@ export default function Projects() {
                     <li>Retrieved information from a API to be displayed in components, minimizing code verbosity</li>
                     <li>Leveraged Git for version control and deployed the website using Vercel</li>
                 </StyledDescription>
+
+                {/* Online Resume Project */}
                 <StyledRow>
                     <p>Online Resume | <em>HTML, CSS, JavaScript, Git, Vercel</em></p>
                     <p><em>Jan. 2025 - Feb. 2025</em></p>
@@ -71,6 +77,8 @@ export default function Projects() {
                     <li>Implemented mobile-first responsive design using CSS media queries and flexbox, ensuring optimal viewing across
                         devices, and applied SEO best practices including meta tags and semantic HTML</li>
                 </StyledDescription>
+
+                {/* Simple Connect 4 Project */}
                 <StyledRow>
                     <p>Simple Connect 4 | <em>Python</em></p>
                     <p><em>Nov. 2022 - Dec. 2022</em></p>
@@ -79,7 +87,7 @@ export default function Projects() {
                     <li>Developed a Python-based Connect 4 game featuring an intelligent computer opponent</li>
                     <li>Implemented an advanced look-ahead algorithm enabling the Opponent to calculate multiple future moves for
                         optimal decision-making</li>
-                    <li>Utilized game theory principles to enhance the AI’s strategic gameplay and challenge human players</li>
+                    <li>Utilized game theory principles to enhance the AI's strategic gameplay and challenge human players</li>
                 </StyledDescription>
             </StyledMain>
         </>

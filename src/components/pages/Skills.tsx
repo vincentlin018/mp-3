@@ -1,8 +1,8 @@
 import { styled } from 'styled-components';
 import { StyledMain, StyledH3 } from "../stylesandhtmlcomponents/SharedStyles.tsx";
-import { UseDocumentTitle, UseMetaContent } from "../stylesandhtmlcomponents/HTMLComponents.tsx";
+import { UseMetaContent } from "../stylesandhtmlcomponents/HTMLComponents.tsx";
 
-
+// Grid container for organizing skills
 const StyledGrid = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -11,6 +11,7 @@ const StyledGrid = styled.div`
     width: 100%;
 `;
 
+// Styling for the title of each skill category
 const StyledListTitle = styled.h3`
     color: #FFF5EE;
     text-align: center;
@@ -18,6 +19,7 @@ const StyledListTitle = styled.h3`
     
 `;
 
+// Styling for each grid item (skill category)
 const StyledGridItem = styled.div`
     background-color: #445577;
     padding: 1rem;
@@ -25,6 +27,7 @@ const StyledGridItem = styled.div`
     margin: 5%;
 `;
 
+// Styling for the list of skills
 const StyledList = styled.ul`
   list-style-type: none; /* Remove default bullet points */
   padding-left: 0;
@@ -38,7 +41,7 @@ const StyledList = styled.ul`
 `;
 
 export default function Skills() {
-    UseDocumentTitle('Skills | Resume');
+    // Set meta description for SEO
     UseMetaContent("A website that display's Vincent's skills");
 
     return (
@@ -46,7 +49,7 @@ export default function Skills() {
             <StyledH3>Skills</StyledH3>
 
             <StyledGrid>
-
+                {/* Languages Grid Item */}
                 <StyledGridItem>
                     <StyledListTitle>Languages:</StyledListTitle>
                     <StyledList>
@@ -61,6 +64,7 @@ export default function Skills() {
                     </StyledList>
                 </StyledGridItem>
 
+                {/* Frameworks Grid Item */}
                 <StyledGridItem>
                     <StyledListTitle>Frameworks:</StyledListTitle>
                     <StyledList>
@@ -70,7 +74,7 @@ export default function Skills() {
                     </StyledList>
                 </StyledGridItem>
 
-                {/* Second Row */}
+                {/* Developer Tools Grid Item */}
                 <StyledGridItem>
                     <StyledListTitle>Developer Tools:</StyledListTitle>
                     <StyledList>
@@ -82,6 +86,7 @@ export default function Skills() {
                     </StyledList>
                 </StyledGridItem>
 
+                {/* Libraries Grid Item */}
                 <StyledGridItem>
                     <StyledListTitle>Libraries:</StyledListTitle>
                     <StyledList>

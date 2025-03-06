@@ -1,6 +1,8 @@
 import { Link } from 'react-router';
 import { styled } from 'styled-components';
 
+
+// Styled component for the navigation bar
 const StyledNav = styled.nav`
     width: 30%;
     background-color: #312f36;
@@ -55,10 +57,12 @@ const StyledNav = styled.nav`
     }
 `;
 
+// Navigation component that renders the navigation menu using StyledNav and links to different pages in the application.
 export default function Navigation() {
     return(
         <StyledNav>
             <ul>
+                {/* Each <li> contains a <Link> component that navigates to a specific route */}
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/education">Education</Link></li>
                 <li><Link to="/experience">Experience</Link></li>

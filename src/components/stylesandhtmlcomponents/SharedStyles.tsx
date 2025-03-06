@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+// Styled component for the H3 header tags
 export const StyledH3 = styled.h3`
     margin: 2vw;
     text-align: center;
@@ -7,10 +8,12 @@ export const StyledH3 = styled.h3`
     color: white;
 `;
 
+// Styled component for the main content area
 export const StyledMain = styled.main`
     display: flex;
     flex-direction: column;
     width: 70%;
+    height: 100vh;
     background-color: #334464;
     padding: 3vw;
     color: white;
@@ -21,6 +24,7 @@ export const StyledMain = styled.main`
     }    
 `;
 
+// Styled component for the main text content
 export const StyledMainText = styled.div`
     width: 100%;
     display: flex;
