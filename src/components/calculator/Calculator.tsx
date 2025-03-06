@@ -47,7 +47,7 @@ const ButtonGrid = styled.div`
 `;
 
 // Styled button component
-const Button = styled.button`
+const StyledButton = styled.button`
     background-color: #3b3f54; 
     color: white; 
     font-size: calc(5px + 1vw); 
@@ -89,7 +89,6 @@ export default function Calculator() {
 
         // Initialization of the output with default values
         let output: number | string = 0;
-
 
         // Matches the button that the user clicks with the correct operation.
         // If a case is matched, then the operation is performed and the matching process ends with the break.
@@ -158,12 +157,12 @@ export default function Calculator() {
 
             {/* Buttons */}
             <ButtonGrid>
-                <Button onClick={() => performOperation('addition')}>+</Button>
-                <Button onClick={() => performOperation('subtraction')}>-</Button>
-                <Button onClick={() => performOperation('multiplication')}>*</Button>
-                <Button onClick={() => performOperation('division')}>/</Button>
-                <Button onClick={() => performOperation('exponentiation')}>**</Button>
-                <Button onClick={clearCalculator}>C</Button> {/* Clear button */}
+                <StyledButton onClick={() => performOperation('addition')}>+</StyledButton>
+                <StyledButton onClick={() => performOperation('subtraction')}>-</StyledButton>
+                <StyledButton onClick={() => performOperation('multiplication')}>*</StyledButton>
+                <StyledButton onClick={() => performOperation('division')}>/</StyledButton>
+                <StyledButton onClick={() => performOperation('exponentiation')}>**</StyledButton>
+                <StyledButton onClick={clearCalculator}>C</StyledButton> {/* Clear button */}
             </ButtonGrid>
 
             {/* Styled Output */}
