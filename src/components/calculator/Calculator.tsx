@@ -31,7 +31,7 @@ const StyledInput = styled.input`
     margin-bottom: 1vh;
     width: 100%; 
     text-align: center;
-    box-shadow: 1px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+    box-shadow: 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
 
     &::placeholder {
         /* Placeholder text color */
