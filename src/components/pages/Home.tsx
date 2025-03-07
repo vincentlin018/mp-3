@@ -9,7 +9,7 @@ const StyledImage = styled.div`
     border: 4px solid white;
 
     img {
-        max-width: 100%; // Ensures the image is responsive
+        max-width: 100%;
     }
 `;
 
@@ -18,7 +18,7 @@ const StyledText = styled.div`
     align-self: center;
     text-align: center;
     width: 60%;
-    margin: 1vh 1vw;
+    margin: 3vh 1vw;
     font-size: calc(10px + 1vw); // Responsive font size
     color: white;
 `;

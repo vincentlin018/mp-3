@@ -24,7 +24,7 @@ const StyledNav = styled.nav`
         font-size: calc(2px + 2vw);
         width: 90%;
         background-color: white;
-        padding: 2vh 0;
+        padding: 2.5vh 0;
         margin: 5vh auto;
     }
 
