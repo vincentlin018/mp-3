@@ -39,6 +39,7 @@ const StyledImage = styled.div`
         max-width: 100%;
         object-fit: contain;
         border-radius: 7%;
+        border: 2px solid white;
     }
 `;
 
